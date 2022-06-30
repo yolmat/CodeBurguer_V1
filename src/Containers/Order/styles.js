@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 export const Container = styled.div `
     display: flex;
@@ -46,6 +47,7 @@ export const Article = styled.article `
     justify-content: space-between;
     align-items: center;
     max-width: 27rem;
+    min-width: 27rem;
 `
 
 export const Span = styled.span `
@@ -63,11 +65,29 @@ export const H3 = styled.h3 `
     margin-top: 1rem;
 `
 
-export const Trash = styled.img `
+export const Btn = styled.button `
+    border: none;
     width: 5%;
+    background-color: rgba(255,255,255,0);
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.7;
+    }
+
+    &:active {
+        opacity: 0.5;
+    }
 `
 
-export const Button = styled.button `
+export const Trash = styled.img `
+    width: 100%;
+`
+
+export const Button = styled(Link) `
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 1.5rem;
     font-weight: 900;
     color: #ffffff;

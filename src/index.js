@@ -1,12 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './Containers/Home';
-import Order from './Containers/Order'
-import GlobalStyles from './globalStyles';
+import ReactDOM from 'react-dom';
+import GlobalStyles from './Containers/styles/globalStyles';
+import Routes from './routes'
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.render(
     <>
-        <Order /><GlobalStyles />
-    </>
+        <Routes />
+        <GlobalStyles />
+    </>,
+    document.getElementById('root')
 );
